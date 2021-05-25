@@ -1,0 +1,99 @@
+@import "../scss/mixins.scss";
+@import url(//db.onlinewebfonts.com/c/901497541657a2f24e42848bcf7fad52?family=Avenir+Heavy);
+@import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
+
+$margin-top: 131px;
+
+.page-about {
+  margin-top: $margin-top;
+  min-height: calc(100vh - #{$margin-top});
+  min-width: 230px;
+  display: flex;
+
+  @include laptop {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  &__about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f5f5f5;
+    width: 54%;
+    min-width: 400px;
+
+    @include laptop {
+      order: 2;
+      width: 100%;
+      min-width: 230px;
+    }
+
+    &_header {
+      font-size: 50px;
+      color: #4a4a4a;
+      font-family: "Avenir+Heavy", sans-serif;
+      margin: 101px 0 48px;
+      width: 295px;
+
+      @include laptop {
+        margin: 19px 0 14px;
+        text-align: center;
+        width: 280px;
+      }
+
+      @include tiny {
+        width: auto;
+      }
+    }
+
+    .par {
+      width: 295px;
+      font-size: 16px;
+      color: #858583;
+      font-family: "ProximaNW01-Reg", sans-serif;
+      line-height: 1.5em;
+
+      @include laptop {
+        text-align: center;
+        width: 280px;
+      }
+
+      @include tiny {
+        width: auto;
+      }
+    }
+
+    &_first-par {
+      margin-bottom: 24px;
+    }
+
+    &_second-par {
+      @include laptop {
+        margin-bottom: 57px;
+      }
+    }
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    object-fit: cover;
+    margin-left: 10px;
+    min-width: 1200px;
+
+    @include laptop {
+      order: 1;
+      width: 100%;
+      min-width: 230px;
+      margin-left: 0;
+    }
+
+    &_img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

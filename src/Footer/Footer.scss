@@ -1,0 +1,187 @@
+@import "../scss/mixins.scss";
+@import url(//db.onlinewebfonts.com/c/901497541657a2f24e42848bcf7fad52?family=Avenir+Heavy);
+@import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
+
+$proxima-font-family: "ProximaNW01-Reg", sans-serif;
+$color-rgb-74: rgb(74, 74, 74);
+$color-link: #858583;
+$dark-color: #4a4a4a;
+
+.page-footer {
+  @include laptop {
+    min-width: 230px;
+  }
+
+  &__hr {
+    border-top: 1.2px solid rgb(199, 199, 199);
+  }
+
+  &__up {
+    display: flex;
+    margin: 1px 0 8px;
+
+    @include laptop {
+      flex-direction: column;
+      margin: 0 0 12px;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 68px;
+
+    @include laptop {
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+    }
+  }
+
+  .headers {
+    font-size: 21px;
+    font-family: "Avenir+Heavy", sans-serif;
+    color: $dark-color;
+    font-weight: bold;
+    margin: 69px 0 22px;
+
+    @include laptop {
+      margin-top: 0;
+      font-size: 30px;
+    }
+
+    @include tiny {
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+
+  .link {
+    font-family: $proxima-font-family;
+    color: $color-link;
+    font-size: 16px;
+    text-decoration: none;
+    height: 32px;
+    display: flex;
+    align-items: center;
+
+    @include laptop {
+      font-size: 22px;
+    }
+
+    @include tiny {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  &__cielo-apparel {
+    @include laptop {
+      order: 1;
+      height: 250px;
+    }
+  }
+
+  &__explore {
+    @include laptop {
+      order: 1;
+      height: 230px;
+    }
+  }
+
+  &__join {
+    @include laptop {
+      order: 3;
+      height: 266px;
+    }
+
+    &_form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &_email {
+      margin-top: 12px;
+      margin-bottom: 19px;
+      width: 220px;
+      height: 40px;
+      padding: 3px 3px 3px 21px;
+      border-bottom: none;
+      font-family: $proxima-font-family;
+      font-size: 14px;
+      color: $color-rgb-74;
+      border: none;
+      border-bottom: 1px solid $color-rgb-74;
+      outline: none;
+      font-weight: 400;
+    }
+
+    &_email:hover {
+      border-width: 3px;
+    }
+
+    .active-email {
+      border-color: #fe5b41;
+      border-width: 3px;
+    }
+
+    &_submit {
+      width: 218px;
+      height: 38px;
+      background-color: transparent;
+      transition: background-color 0.4s ease 0s, color 0.4s ease 0s;
+      cursor: pointer;
+      border: 1px solid $color-rgb-74;
+      font-family: $proxima-font-family;
+      font-size: 16px;
+      color: $dark-color;
+      margin-bottom: 19px;
+    }
+
+    &_submit:hover {
+      color: #ffffff;
+      background-color: $dark-color;
+    }
+
+    &_thanks-text {
+      display: none;
+      color: $color-rgb-74;
+    }
+
+    .active-thanks-text {
+      display: block;
+    }
+  }
+
+  &__follow-us {
+    @include laptop {
+      order: 2;
+      height: 200px;
+    }
+  }
+
+  &__down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0 30px;
+    font-size: 14px;
+    color: $color-link;
+
+    @include laptop {
+      margin: 13px 0 57px;
+    }
+
+    &_text {
+      text-align: center;
+    }
+
+    &_link {
+      text-decoration: none;
+      color: $color-link;
+    }
+  }
+}

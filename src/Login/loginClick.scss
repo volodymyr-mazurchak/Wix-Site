@@ -1,0 +1,143 @@
+@import "../scss/mixins.scss";
+@import url(//db.onlinewebfonts.com/c/901497541657a2f24e42848bcf7fad52?family=Avenir+Heavy);
+@import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
+
+$proxima-font-family: "ProximaNW01-Reg", sans-serif;
+
+.login-container {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 4;
+
+  &__button-cross {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+  }
+
+  &__text-header {
+    font-size: 48px;
+    line-height: 48px;
+    font-family: "Avenir+Heavy", sans-serif;
+    color: #4a4a4a;
+    margin-bottom: 24px;
+  }
+
+  &__subheader-wrapper {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  &__subheader-text {
+    font-size: 18px;
+    font-family: $proxima-font-family;
+    margin: 0 4px;
+    color: rgb(74, 74, 74);
+  }
+
+  &__subheader-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: $proxima-font-family;
+    color: rgb(180, 106, 81);
+    font-weight: 400;
+    text-align: left;
+    padding: 0;
+  }
+
+  &__auth-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 2px;
+
+    @include mobile {
+      width: 265px;
+    }
+  }
+
+  &__facebook-btn,
+  &__google-btn {
+    width: 100%;
+    border-radius: 1px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+    color: #fff;
+    font-weight: 300;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    border: none;
+    position: relative;
+  }
+
+  &__facebook-btn {
+    background-color: #3b5998;
+    margin-bottom: 16px;
+  }
+
+  &__google-btn {
+    background-color: #4285f4;
+  }
+
+  &__facebook-img,
+  &__google-img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+  }
+
+  &__hr-wrapper {
+    width: 320px;
+    margin: 12px 0 24px;
+    height: 11px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    text-align: center;
+
+    @include mobile {
+      width: 265px;
+    }
+  }
+
+  &__hr-text {
+    font-family: $proxima-font-family;
+    font-size: 16px;
+    color: rgb(74, 74, 74);
+    background-color: rgb(255, 255, 255);
+    padding: 0 13px;
+  }
+
+  &__email-btn {
+    font-weight: 300;
+    font-family: $proxima-font-family;
+    font-size: 16px;
+    height: 40px;
+    width: 320px;
+    cursor: pointer;
+    outline: none;
+    color: #4a4a4a;
+    background-color: transparent;
+    border: 1px solid rgb(199, 199, 199);
+
+    @include mobile {
+      width: 265px;
+    }
+  }
+}

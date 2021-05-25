@@ -1,0 +1,238 @@
+@import "../scss/mixins.scss";
+@import url(//db.onlinewebfonts.com/c/901497541657a2f24e42848bcf7fad52?family=Avenir+Heavy);
+@import url(//db.onlinewebfonts.com/c/55c4f556836775174bfac94178a3fe82?family=ProximaNW01-Reg);
+
+$margin-top: 131px;
+$text-color: #858583;
+$proxima-font-family: "ProximaNW01-Reg", sans-serif;
+
+.page-contact {
+  margin-top: $margin-top;
+  min-height: calc(100vh - #{$margin-top});
+  min-width: 230px;
+  display: flex;
+
+  @include laptop {
+    flex-direction: column;
+  }
+
+  &__contact-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f5f5f5;
+    width: 54%;
+    min-height: 1317px;
+
+    @include laptop {
+      order: 2;
+      width: 100%;
+      min-height: 0;
+      min-width: 230px;
+    }
+
+    &_content-wrapper {
+      width: 293px;
+
+      @include laptop {
+        text-align: center;
+      }
+    }
+
+    &_header {
+      margin: 101px 0 49px;
+      font-size: 50px;
+      color: #4a4a4a;
+      font-family: "Avenir+Heavy", sans-serif;
+
+      @include laptop {
+        font-size: 34px;
+        margin: 19px 0 26px;
+      }
+    }
+
+    &_visit-text {
+      text-decoration: underline;
+      font-size: 18px;
+      color: $text-color;
+      font-family: $proxima-font-family;
+      margin-bottom: 25px;
+
+      @include laptop {
+        margin-bottom: 11px;
+      }
+    }
+
+    &_address-text {
+      font-size: 16px;
+      color: $text-color;
+      font-family: $proxima-font-family;
+      margin-bottom: 31px;
+      line-height: 1.5em;
+
+      @include laptop {
+        margin-bottom: 10px;
+      }
+    }
+
+    &_link-email {
+      cursor: pointer;
+    }
+
+    &_form {
+      margin-bottom: 72px;
+
+      @include laptop {
+        margin-bottom: 37px;
+      }
+    }
+
+    .form-name-email {
+      width: 130px;
+      height: 42px;
+      padding: 3px 3px 3px 12px;
+      border-bottom: none;
+      font-family: $proxima-font-family;
+      font-size: 16px;
+      color: $text-color;
+      border: none;
+      border-bottom: 1px solid $text-color;
+      outline: none;
+      font-weight: 400;
+      background-color: transparent;
+    }
+
+    .form-name-email:hover {
+      border-width: 3px;
+    }
+
+    .active-name-email {
+      border-color: #fe5b41;
+      border-width: 3px;
+    }
+
+    &_name {
+      margin: 10px 0 13px;
+    }
+
+    &_email {
+      margin: 10px 0 13px 8px;
+    }
+
+    &_textarea {
+      width: 273px;
+      height: 126px;
+      padding: 12px 10px 3px 16px;
+      border-bottom: none;
+      font-family: $proxima-font-family;
+      font-size: 16px;
+      color: $text-color;
+      border: none;
+      border-bottom: 1px solid $text-color;
+      outline: none;
+      font-weight: 400;
+      background-color: transparent;
+      resize: none;
+      margin-bottom: 16px;
+    }
+
+    &_textarea:hover {
+      border-width: 3px;
+    }
+
+    &_submit {
+      width: 273px;
+      height: 31px;
+      background-color: #4a4a4a;
+      color: #ffffff;
+      font-size: 16px;
+      font-family: $proxima-font-family;
+      transition: background-color 0.4s ease 0s;
+      cursor: pointer;
+      border: none;
+      margin-bottom: 6px;
+    }
+
+    &_submit:hover {
+      background-color: $text-color;
+    }
+
+    &_thanks-text {
+      text-align: center;
+      visibility: hidden;
+      color: rgb(74, 74, 74);
+    }
+
+    .active-thanks-text {
+      visibility: visible;
+    }
+
+    &_stockists-text {
+      text-decoration: underline;
+      font-size: 18px;
+      color: $text-color;
+      font-family: $proxima-font-family;
+      margin-bottom: 29px;
+
+      @include laptop {
+        margin-bottom: 19px;
+      }
+    }
+
+    .stores {
+      font-size: 16px;
+      color: $text-color;
+      font-family: $proxima-font-family;
+      line-height: 1.5em;
+    }
+
+    &_first-store {
+      margin-bottom: 21px;
+
+      @include laptop {
+        margin-bottom: 15px;
+      }
+    }
+
+    &_second-store {
+      margin-bottom: 23px;
+
+      @include laptop {
+        margin-bottom: 15px;
+      }
+    }
+
+    &_third-store {
+      margin-bottom: 30px;
+
+      @include laptop {
+        margin-bottom: 16px;
+      }
+    }
+
+    &_fourth-store {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    min-height: 1317px;
+    margin-left: 10px;
+
+    @include laptop {
+      order: 1;
+      margin-left: 0;
+      min-width: 230px;
+      min-height: 0;
+    }
+
+    &_img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

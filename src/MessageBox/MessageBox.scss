@@ -1,0 +1,20 @@
+.message-box {
+  margin: 0 20px 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  transition: box-shadow 0.2s cubic-bezier(0.39, 0.16, 0.34, 0.99);
+  background-color: rgb(133, 133, 131);
+  color: rgb(255, 255, 255);
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.message-box:hover {
+  box-shadow: 0 0 4px 3px rgb(22 45 61 / 25%);
+}
